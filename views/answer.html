@@ -1,0 +1,36 @@
+<!DOCTYPE htm>
+<html ng-app="App">
+    <head>
+        <link rel="stylesheet" type="text/css" href="/answer.css">
+    </head>
+
+    <body ng-controller="mainController" ng-init="show=true">
+            
+            <h1 ng-if="show">头脑王者</h1>
+            <article ng-if="show">
+                <h3>题目</h3>
+                <button ng-repeat="obj in data" ng-click="change()">
+                    试题{{$index}}
+                </button>
+            </article>
+
+            <article ng-if="!show">
+                <h3>{{question}}</h3>
+                <button ng-repeat="choise in choises" ng-click="next()">
+                    {{choise}}
+                </button>
+            </article>
+    
+
+
+
+
+
+            <script src="js/angular.min.js"></script>
+            <script src="js/controller.js"></script>
+    </body>
+
+
+
+
+</html>
